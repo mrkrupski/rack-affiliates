@@ -45,7 +45,7 @@ module Rack
     end
 
     def params_info(req)
-      [req.params[@param], req.env["HTTP_REFERER"], Time.now.to_i]
+      [req.env["HTTP_REFERER"], Time.now.to_i]
     end
 
     def cookie_info(req)
