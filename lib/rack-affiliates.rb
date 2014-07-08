@@ -18,7 +18,7 @@ module Rack
     def call(env)
       req = Rack::Request.new(env)
 
-      http_host    = req.env["HTTP_HOST"]
+      http_host    = request.domain || req.env["HTTP_HOST"]
       request_from = req.env["HTTP_REFERER"]
       cookie_from  = req.cookies[COOKIE_FROM]
 
