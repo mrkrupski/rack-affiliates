@@ -1,7 +1,7 @@
 Rack::Affiliates
 ================
 
-Rack::Affiliates is a rack middleware that extracts information about the referrals came from an affiliated site. Specifically, it looks up for specific parameter (<code>ref</code> by default) in the request. If found, it persists affiliate tag, referring url and time in a cookie for later use.
+Rack::Affiliates is a rack middleware that extracts information about the referrals came from an affiliated site. Specifically, it looks up for referer url and compare it with the database in the request. If found, it persists referring url and time in a cookie for later use.
 
 Common Scenario
 ---------------
